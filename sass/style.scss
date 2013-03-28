@@ -9,3 +9,8 @@ Tags: two-columns, responsive
 */
 
 @import url("../html5_boilerplate_wp_compass/style.css");
+
+article {
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #333;
+}

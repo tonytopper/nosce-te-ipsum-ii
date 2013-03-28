@@ -8,3 +8,4 @@ Version: 1.0
 Template: html5_boilerplate_wp_compass
 Tags: two-columns, responsive
 */
+article { padding: 0 0 10px 0; border-bottom: 1px solid #333; }
