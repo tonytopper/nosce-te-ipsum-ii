@@ -7,15 +7,58 @@ Version: 1.0
 Template: html5_boilerplate_wp_compass
 Tags: two-columns, responsive
 */
-
 @import url("../html5_boilerplate_wp_compass/style.css");
 
-article {
+@import "compass/css3/transform";
+@import "compass/css3/box-shadow";
+@import "compass/css3/images";
+
+@font-face {
+  font-family: '1942report1942report';
+  src: url('fonts/1942-webfont.eot');
+  src: url('fonts/1942-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/1942-webfont.woff') format('woff'),
+    url('fonts/1942-webfont.ttf') format('truetype'),
+    url('fonts/1942-webfont.svg#1942report1942report') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#posts h2 {
+  font: 40px/44px '1942report1942report', Arial, sans-serif;
+  letter-spacing: 0;
+}
+
+article.post {
   padding: 21px 0;
   border-bottom: 1px solid #999;
+  abbr.published:before {
+    content: ""; 
+  }
+  footer {
+    font-size: 0.9em;
+    background-color: #ccc;
+  }
 }
 
 header[role="banner"] {
+  @include background-image(linear-gradient(#ffffff, #aaaaaa));
+  h1 {
+    font-size: 2em;
+    span {
+      position: relative;
+      display: inline-block;
+      padding: 5px;
+      background: #fff;
+      @include box-shadow(); 
+    }
+    $length: 18; // The word is 11 letters long
+    @for $i from 1 through $length {
+      .char#{$i} {
+        @include transform(translateY( round(sin(($i - 1)/($length - 1)*2*pi()) * - 25px)) );
+      }
+    }
+  }
   nav {
     background-color: #333;
     li a {
