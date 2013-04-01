@@ -12,7 +12,7 @@ Tags: two-columns, responsive
 
 #posts h2 { font: 40px/44px '1942report1942report', Arial, sans-serif; letter-spacing: 0; }
 
-article.post { padding: 21px 0; border-bottom: 1px solid #999; }
+article.post { width: 450px; padding: 21px 0; border-bottom: 1px solid #999; float: left; }
 article.post abbr.published:before { content: ""; }
 article.post footer { font-size: 0.9em; background-color: #ccc; }
 

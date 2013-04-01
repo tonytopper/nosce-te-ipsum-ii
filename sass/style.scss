@@ -8,7 +8,7 @@ Template: html5_boilerplate_wp_compass
 Tags: two-columns, responsive
 */
 @import url("../html5_boilerplate_wp_compass/style.css");
-
+@import "susy";
 @import "compass/css3/transform";
 @import "compass/css3/box-shadow";
 @import "compass/css3/images";
@@ -30,8 +30,10 @@ Tags: two-columns, responsive
 }
 
 article.post {
+  width:450px;
   padding: 21px 0;
   border-bottom: 1px solid #999;
+  float: left;
   abbr.published:before {
     content: ""; 
   }
